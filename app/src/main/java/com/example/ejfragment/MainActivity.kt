@@ -2,14 +2,17 @@ package com.example.ejfragment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.appcompat.widget.Toolbar
+import androidx.navigation.fragment.NavHostFragment
+
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navHostFragment: NavHostFragment
+    private lateinit var navController: androidx.navigation.NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,18 +22,16 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment)
+        navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+        navController = navHostFragment.navController
 
-        // FragmentMain es top-level
-        appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.fragmentMain)
-        )
-
+        // Configurar top-level fragment(s)
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.fragmentMain))
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
