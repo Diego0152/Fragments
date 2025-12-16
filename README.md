@@ -1,8 +1,8 @@
-#Ejemplo de Navegación con Toolbar y AppBarConfiguration
+# Ejemplo de Navegación con Toolbar y AppBarConfiguration
 
 Este proyecto muestra cómo implementar navegación entre fragments en Android usando Navigation Component y una Toolbar con AppBarConfiguration.
 
-##Screens
+## Screens
 
 FragmentMain – Pantalla principal (top-level).
 
@@ -12,7 +12,7 @@ FragmentMain – Pantalla principal (top-level).
 
 -> FragmentC – Fragment secundario.
 
-##Funcionalidades
+## Funcionalidades
 
 - Toolbar con título dinámico.
 
@@ -20,10 +20,10 @@ FragmentMain – Pantalla principal (top-level).
 
 - Navegación entre fragments según nav_graph.xml.
 
-##Cómo ejecutar
+## Cómo ejecutar
 
-1.Clonar el repositorio.
+1. Clonar el repositorio.
 
-2.Abrir en Android Studio.
+2. Abrir en Android Studio.
 
-3.Ejecutar en un emulador o dispositivo físico.
+3. Ejecutar en un emulador o dispositivo físico.
