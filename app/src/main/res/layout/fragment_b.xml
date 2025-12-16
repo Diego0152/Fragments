@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/red"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="B"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnBGoC"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Siguiente"
+        android:layout_gravity="right"/>
+
+    <Button
+        android:id="@+id/btnBGoA"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="Atrás"
+        android:layout_gravity="left"/>
+
+</FrameLayout>
